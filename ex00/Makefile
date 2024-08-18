@@ -13,7 +13,7 @@ INCLUDES := $(SRC:.cpp=.hpp)
 all: $(NAME)
 
 $(NAME): $(SRC)
-	$(CXX) -o $@ $(CXXFLAGS) $(SRC)
+	$(CXX) -o $@ $(CXXFLAGS) -I. $(SRC)
 
 clean:
 	rm -rf $(NAME)

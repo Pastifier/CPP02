@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebinjama <ebinjama@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/19 01:12:43 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/08/19 01:13:56 by ebinjama         ###   ########.fr       */
+/*   Created: 2024/08/18 17:27:14 by ebinjama          #+#    #+#             */
+/*   Updated: 2024/08/18 17:32:12 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <Fixed.hpp>
+class Fixed
+{
+private:
+	int _fixedPointValue;
+	static int const _mantissaBitNum = 8;
 
-int main(void) {
-	Fixed a;
-	Fixed b(a);
-	Fixed c;
+public:
+	Fixed();
+	Fixed(const Fixed& other);
+	Fixed& operator=(const Fixed& other);
 
-	c = b;
+	~Fixed();
 
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-
-	return 0;
-}
+	int getRawBits(void) const;
+	void setRawBits(int const raw);
+};
