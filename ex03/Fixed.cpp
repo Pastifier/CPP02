@@ -12,6 +12,7 @@
 
 #include "Fixed.hpp"
 #include <iostream>
+#include <exception>
 
 Fixed::Fixed()
 {
@@ -105,6 +106,9 @@ Fixed Fixed::operator/(const Fixed& other) const
 {
 	Fixed result;
 
+	if (other._rawBits == 0) {
+		throw std::invalid_argument("Fixed-point exception: dividing by zero");
+	}
 	result._rawBits = ((long)_rawBits << _fractionalBitNum) / other._rawBits;
 	return result;
 }
@@ -193,6 +197,7 @@ float Fixed::_myRoundF(const float val) const
 	} else {
 		if (biasedExponent == 128) {
 			std::cout << "WARNING: " << val << " is not a normalised value!" << std::endl;
+			throw std::invalid_argument("Fixed-point exception: initialising with non-normalised floating-point value");
 			return val + val;
 		} else
 			return val;

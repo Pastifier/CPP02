@@ -20,7 +20,7 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
 	Fixed abp = cross_product(a, b, point);
 	Fixed bcp = cross_product(b, c, point);
 	Fixed cap = cross_product(c, a, point);
-	
+
 	if (( abc >= 0 && abp >= 0 && bcp >= 0 && cap >= 0 )
 		|| ( abc <= 0 && abp <= 0 && bcp <= 0 && cap <= 0 ))
 		return true;
@@ -33,6 +33,6 @@ Fixed cross_product(Point const a, Point const b, Point const c)
 	Fixed y1 = b.getY() - a.getY();
 	Fixed x2 = c.getX() - a.getX();
 	Fixed y2 = c.getY() - a.getY();
-	
+
 	return (x1 * y2 - x2 * y1);
 }
