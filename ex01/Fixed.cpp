@@ -6,7 +6,7 @@
 /*   By: ebinjama <ebinjama@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 02:07:13 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/08/19 04:41:38 by ebinjama         ###   ########.fr       */
+/*   Updated: 2024/08/19 04:58:16 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,6 @@ float Fixed::_myRoundF(const float val) const
 	return bitField.repF;
 }
 
-// But how does the exponent tell us the number of fractional bits? Why does it work like that?
 std::ostream& operator<<(std::ostream& os, const Fixed& fixedNum)
 {
 	os << fixedNum.toFloat();
