@@ -5,24 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebinjama <ebinjama@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 17:27:14 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/08/18 17:32:12 by ebinjama         ###   ########.fr       */
+/*   Created: 2024/08/19 02:06:45 by ebinjama          #+#    #+#             */
+/*   Updated: 2024/08/19 04:33:15 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
+
 class Fixed
 {
-private:
-	int _fixedPointValue;
-	static int const _mantissaBitNum = 8;
-
 public:
+	Fixed(const int initWith);
+	Fixed(const float initWith);
 	Fixed();
 	Fixed(const Fixed& other);
-	Fixed& operator=(const Fixed& other);
-
 	~Fixed();
 
-	int getRawBits(void) const;
-	void setRawBits(int const raw);
+	Fixed& operator=(const Fixed& other);
+
+	float toFloat(void) const;
+	int toInt(void) const;
+private:
+	static int const _fractionalBitNum = 8;
+	int _rawBits;
+	float _myRoundF(const float val) const;
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixedNum);
