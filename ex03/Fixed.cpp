@@ -167,7 +167,6 @@ int Fixed::toInt() const
 
 float Fixed::_myRoundF(const float val) const
 {
-	int signBit;
 	int biasedExponent;
 
 	union bitFieldFI {
@@ -177,7 +176,6 @@ float Fixed::_myRoundF(const float val) const
 	bitField.repF = val;
 
 
-	signBit = bitField.repI & 0x80000000;
 	biasedExponent = (int)((bitField.repI & 0x7f800000) >> 23) - 127;
 
 	if (biasedExponent < 23) {
