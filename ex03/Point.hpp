@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebinjama <ebinjama@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/19 02:06:45 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/08/19 05:17:38 by ebinjama         ###   ########.fr       */
+/*   Created: 2024/08/19 05:14:54 by ebinjama          #+#    #+#             */
+/*   Updated: 2024/08/19 05:17:15 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-
-class Fixed
+class Point
 {
 public:
-	Fixed(const int initWith);
-	Fixed(const float initWith);
-	Fixed();
-	Fixed(const Fixed& other);
-	~Fixed();
-
-	Fixed& operator=(const Fixed& other);
-
-	float toFloat(void) const;
-	int toInt(void) const;
+	Point(/* args */);
+	~Point();
 private:
-	static int const _fractionalBitNum = 8;
-	int _rawBits;
-	float _myRoundF(const float val) const;
+	/* data */
 };
-
-std::ostream& operator<<(std::ostream& os, const Fixed& fixedNum);

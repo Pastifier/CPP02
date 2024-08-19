@@ -6,10 +6,11 @@
 /*   By: ebinjama <ebinjama@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 17:27:14 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/08/18 17:32:12 by ebinjama         ###   ########.fr       */
+/*   Updated: 2024/08/19 05:17:26 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 class Fixed
 {
 private:

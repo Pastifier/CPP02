@@ -6,9 +6,11 @@
 /*   By: ebinjama <ebinjama@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 02:06:45 by ebinjama          #+#    #+#             */
-/*   Updated: 2024/08/19 05:04:59 by ebinjama         ###   ########.fr       */
+/*   Updated: 2024/08/19 05:17:54 by ebinjama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include <iostream>
 
