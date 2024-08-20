@@ -16,6 +16,10 @@ Fixed cross_product(Point const a, Point const b, Point const c);
 
 bool bsp( Point const a, Point const b, Point const c, Point const point)
 {
+	if (point == a || point == b || point == c) {
+		return (false);
+	}
+
 	Fixed abc = cross_product(a, b, c);
 	Fixed abp = cross_product(a, b, point);
 	Fixed bcp = cross_product(b, c, point);

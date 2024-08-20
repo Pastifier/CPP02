@@ -30,6 +30,11 @@ Point& Point::operator=(Point const& other)
 	return (*this);
 }
 
+bool Point::operator==(Point const& other) const {
+	return (_x.toFloat() == other._x.toFloat()
+			&& _y.toFloat() == other._y.toFloat());
+}
+
 Point::~Point()
 {
 }

@@ -22,6 +22,7 @@ public:
 	Point(const Point& other);
 
 	Point& operator=(const Point& other);
+	bool operator==(const Point& other) const;
 	~Point();
 
 	Fixed const& getX() const;
