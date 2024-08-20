@@ -29,6 +29,9 @@ Fixed::Fixed(const Fixed& other)
 Fixed::Fixed(const int initWith)
 {
 	_rawBits = initWith << _fractionalBitNum;
+	if (initWith >= 0b00000001000000000000000000000000
+		|| (initWith & 0b10000000000000000000000000000000) == 0b10000000000000000000000000000000)
+		std::cout << "WARNING: object of type `Fixed` experienced overflow and/or bit-loss" << std::endl;
 }
 
 Fixed::Fixed(const float initWith)

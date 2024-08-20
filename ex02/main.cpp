@@ -6,6 +6,7 @@ int main(void) {
 	std::cout << "---------------------------------- INITIALISING TWO VARIABLES TO TEST WITH ----------------------------------" << std::endl;
 	Fixed a;
 	Fixed const b(Fixed(5.05f) * Fixed(2));
+	Fixed const c(-1);
 	std::cout << "-------------------------------------------------------------------------------------------------------------\n" << std::endl;
 	
 	std::cout << "----------------- TESTING POST-{INCREMENT/DECREMENT}, PRE-{INCREMENT/DECREMENT} -----------------------------" << std::endl;
@@ -16,6 +17,7 @@ int main(void) {
 	std::cout << a-- << std::endl;
 	
 	std::cout << b << std::endl;
+	std::cout << c << std::endl;
 	std::cout << "-------------------------------------------------------------------------------------------------------------\n" << std::endl;
 
 	std::cout << "------------------------------------------ Now we're talking. :3 --------------------------------------------" << std::endl;
